@@ -1,0 +1,12 @@
+# Game Theory Optimization in *Marvel Rivals*
+
+## Introduction
+When anyone is introduced to game theory, they are often met with simple examples like Rock-Paper-Scissors—games with clear strategies but limited real-world application, especially for those engaged in modern competitive gaming. However, many of today’s most popular games, despite their complexity, have underlying discrete structures that can be effectively captured using fundamental game theory models. In particular, hero shooter games like Marvel Rivals feature team-based character selection, where certain heroes counter others, creating a structured yet dynamic competitive landscape where selecting your characters as a team sometimes can play a more important rules than individual skills.
+
+### About *Marvel Rivals*
+Marvel Rival features a 6v6 player-versus-player, third-person hero shooter title. In which two teams needs to select characters from Marvel franchise and use them to compete for certain objectives. There are three board categories of characters: Vanguards, Dualists and Strategists, or in more a more common terms: tanks, damage dealers and supports. Each of the categories have a drastic different play styles, with different advantages and shortcomings, they each play a different role in different stages of the game. Between each individual heroes there is an even larger difference in ability and skill sets. Hero interactions often exhibit clear advantages and disadvantages, such as dive heroes excelling at eliminating fragile supports, team selection can be framed as a strategic decision-making problem. This project models hero selection as a Normal-form game, where each team’s composition acts as a discrete strategy, and the resulting matchups can be evaluated using a payoff matrix derived from publicly available performance statistics.
+
+### Project Overview
+By structuring team selection in this way, we aim to analyze optimal counterstrategies and provide insights into how players can maximize their chances of victory. While hero-based shooters often emphasize mechanical skill and teamwork, understanding the theoretical best responses to enemy team compositions can offer a powerful edge in competitive play. A similar idea can theoretically be applied to any other games with a clear-cut glossary of characters and abilities but due to the popularities of hero shooters and the accessibility of public performance data, Marvel Rivals serves as an ideal case study for this approach
+
+
