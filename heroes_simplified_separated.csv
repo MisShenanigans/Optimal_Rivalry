@@ -1,0 +1,633 @@
+id,name,platform,mode,rank,appearance_rate,win_rate
+1011,Bruce Banner,pc,quickplay,all,8.98,51.87
+1011,Bruce Banner,pc,competitive,all,7.08,51.59
+1011,Bruce Banner,pc,competitive,bronze,7.97,50.38
+1011,Bruce Banner,pc,competitive,celestial and above,6.68,54.66
+1011,Bruce Banner,pc,competitive,diamond,5.46,53.81
+1011,Bruce Banner,pc,competitive,gold,7.27,51.43
+1011,Bruce Banner,pc,competitive,grandmaster,4.47,54.49
+1011,Bruce Banner,pc,competitive,platinum,7.02,52.31
+1011,Bruce Banner,pc,competitive,silver,7.56,50.88
+1011,Bruce Banner,console,quickplay,all,10.93,50.54
+1011,Bruce Banner,console,competitive,all,8.88,52.12
+1011,Bruce Banner,console,competitive,bronze,10.12,51.09
+1011,Bruce Banner,console,competitive,celestial and above,6.59,55.24
+1011,Bruce Banner,console,competitive,diamond,6.95,53.94
+1011,Bruce Banner,console,competitive,gold,9.29,51.75
+1011,Bruce Banner,console,competitive,grandmaster,4.90,54.80
+1011,Bruce Banner,console,competitive,platinum,9.30,52.51
+1011,Bruce Banner,console,competitive,silver,9.52,51.43
+1014,The Punisher,pc,quickplay,all,7.58,48.32
+1014,The Punisher,pc,competitive,all,10.07,48.00
+1014,The Punisher,pc,competitive,bronze,10.35,46.77
+1014,The Punisher,pc,competitive,celestial and above,6.20,46.84
+1014,The Punisher,pc,competitive,diamond,9.58,48.63
+1014,The Punisher,pc,competitive,gold,10.29,48.37
+1014,The Punisher,pc,competitive,grandmaster,8.29,48.28
+1014,The Punisher,pc,competitive,platinum,9.96,48.71
+1014,The Punisher,pc,competitive,silver,10.29,47.71
+1014,The Punisher,console,quickplay,all,7.82,45.27
+1014,The Punisher,console,competitive,all,7.88,45.83
+1014,The Punisher,console,competitive,bronze,9.79,45.06
+1014,The Punisher,console,competitive,celestial and above,3.53,43.70
+1014,The Punisher,console,competitive,diamond,6.51,46.18
+1014,The Punisher,console,competitive,gold,7.75,46.14
+1014,The Punisher,console,competitive,grandmaster,5.22,45.86
+1014,The Punisher,console,competitive,platinum,7.10,46.40
+1014,The Punisher,console,competitive,silver,8.57,45.65
+1015,Storm,pc,quickplay,all,3.73,58.11
+1015,Storm,pc,competitive,all,5.49,57.48
+1015,Storm,pc,competitive,bronze,3.39,58.35
+1015,Storm,pc,competitive,celestial and above,6.54,54.68
+1015,Storm,pc,competitive,diamond,5.79,56.42
+1015,Storm,pc,competitive,gold,6.21,57.71
+1015,Storm,pc,competitive,grandmaster,4.69,55.87
+1015,Storm,pc,competitive,platinum,7.05,56.97
+1015,Storm,pc,competitive,silver,5.08,58.25
+1015,Storm,console,quickplay,all,3.31,55.10
+1015,Storm,console,competitive,all,5.04,57.24
+1015,Storm,console,competitive,bronze,2.80,56.43
+1015,Storm,console,competitive,celestial and above,6.30,55.45
+1015,Storm,console,competitive,diamond,5.92,57.08
+1015,Storm,console,competitive,gold,5.52,57.56
+1015,Storm,console,competitive,grandmaster,5.00,57.03
+1015,Storm,console,competitive,platinum,6.72,57.24
+1015,Storm,console,competitive,silver,4.21,57.51
+1016,Loki,pc,quickplay,all,8.22,52.55
+1016,Loki,pc,competitive,all,5.98,52.10
+1016,Loki,pc,competitive,bronze,6.40,52.27
+1016,Loki,pc,competitive,celestial and above,13.12,52.85
+1016,Loki,pc,competitive,diamond,6.41,51.63
+1016,Loki,pc,competitive,gold,5.57,52.14
+1016,Loki,pc,competitive,grandmaster,8.79,51.82
+1016,Loki,pc,competitive,platinum,5.38,52.12
+1016,Loki,pc,competitive,silver,5.78,52.26
+1016,Loki,console,quickplay,all,8.53,51.65
+1016,Loki,console,competitive,all,7.11,51.50
+1016,Loki,console,competitive,bronze,7.24,51.80
+1016,Loki,console,competitive,celestial and above,12.55,52.08
+1016,Loki,console,competitive,diamond,7.91,51.09
+1016,Loki,console,competitive,gold,6.63,51.57
+1016,Loki,console,competitive,grandmaster,9.80,50.86
+1016,Loki,console,competitive,platinum,6.59,51.66
+1016,Loki,console,competitive,silver,6.76,51.57
+1017,Human Torch,,,,,
+1018,Doctor Strange,pc,quickplay,all,15.50,50.72
+1018,Doctor Strange,pc,competitive,all,24.59,51.14
+1018,Doctor Strange,pc,competitive,bronze,17.70,50.25
+1018,Doctor Strange,pc,competitive,celestial and above,37.20,51.48
+1018,Doctor Strange,pc,competitive,diamond,32.61,51.77
+1018,Doctor Strange,pc,competitive,gold,23.93,51.07
+1018,Doctor Strange,pc,competitive,grandmaster,35.68,51.64
+1018,Doctor Strange,pc,competitive,platinum,28.16,51.46
+1018,Doctor Strange,pc,competitive,silver,20.71,50.68
+1018,Doctor Strange,console,quickplay,all,14.46,49.46
+1018,Doctor Strange,console,competitive,all,21.69,51.73
+1018,Doctor Strange,console,competitive,bronze,15.56,50.71
+1018,Doctor Strange,console,competitive,celestial and above,37.67,51.50
+1018,Doctor Strange,console,competitive,diamond,28.08,52.30
+1018,Doctor Strange,console,competitive,gold,20.04,51.60
+1018,Doctor Strange,console,competitive,grandmaster,32.54,51.90
+1018,Doctor Strange,console,competitive,platinum,23.75,52.07
+1018,Doctor Strange,console,competitive,silver,17.58,51.24
+1020,Mantis,pc,quickplay,all,10.24,55.65
+1020,Mantis,pc,competitive,all,8.56,52.44
+1020,Mantis,pc,competitive,bronze,11.29,52.70
+1020,Mantis,pc,competitive,celestial and above,8.20,50.99
+1020,Mantis,pc,competitive,diamond,7.01,51.18
+1020,Mantis,pc,competitive,gold,8.15,52.73
+1020,Mantis,pc,competitive,grandmaster,7.80,50.73
+1020,Mantis,pc,competitive,platinum,6.72,52.47
+1020,Mantis,pc,competitive,silver,9.70,52.73
+1020,Mantis,console,quickplay,all,9.15,54.40
+1020,Mantis,console,competitive,all,8.62,52.27
+1020,Mantis,console,competitive,bronze,10.77,52.97
+1020,Mantis,console,competitive,celestial and above,6.86,51.15
+1020,Mantis,console,competitive,diamond,7.02,51.08
+1020,Mantis,console,competitive,gold,8.77,52.50
+1020,Mantis,console,competitive,grandmaster,7.00,50.58
+1020,Mantis,console,competitive,platinum,7.22,52.08
+1020,Mantis,console,competitive,silver,10.01,52.56
+1021,Hawkeye,pc,quickplay,all,3.26,44.63
+1021,Hawkeye,pc,competitive,all,2.14,44.28
+1021,Hawkeye,pc,competitive,bronze,3.18,44.96
+1021,Hawkeye,pc,competitive,celestial and above,1.95,45.00
+1021,Hawkeye,pc,competitive,diamond,1.64,43.24
+1021,Hawkeye,pc,competitive,gold,1.90,43.93
+1021,Hawkeye,pc,competitive,grandmaster,1.73,43.73
+1021,Hawkeye,pc,competitive,platinum,1.63,43.38
+1021,Hawkeye,pc,competitive,silver,2.30,44.76
+1021,Hawkeye,console,quickplay,all,2.82,42.06
+1021,Hawkeye,console,competitive,all,1.67,42.45
+1021,Hawkeye,console,competitive,bronze,2.91,42.82
+1021,Hawkeye,console,competitive,celestial and above,1.10,43.14
+1021,Hawkeye,console,competitive,diamond,1.03,41.74
+1021,Hawkeye,console,competitive,gold,1.45,42.39
+1021,Hawkeye,console,competitive,grandmaster,1.03,42.19
+1021,Hawkeye,console,competitive,platinum,1.14,41.83
+1021,Hawkeye,console,competitive,silver,1.88,42.64
+1022,Captain America,pc,quickplay,all,9.98,53.45
+1022,Captain America,pc,competitive,all,5.09,51.07
+1022,Captain America,pc,competitive,bronze,7.02,50.88
+1022,Captain America,pc,competitive,celestial and above,2.50,50.85
+1022,Captain America,pc,competitive,diamond,3.65,51.62
+1022,Captain America,pc,competitive,gold,4.94,51.10
+1022,Captain America,pc,competitive,grandmaster,3.36,51.44
+1022,Captain America,pc,competitive,platinum,4.14,51.39
+1022,Captain America,pc,competitive,silver,5.82,50.78
+1022,Captain America,console,quickplay,all,8.88,51.32
+1022,Captain America,console,competitive,all,4.66,50.38
+1022,Captain America,console,competitive,bronze,5.84,49.89
+1022,Captain America,console,competitive,celestial and above,3.33,52.33
+1022,Captain America,console,competitive,diamond,4.09,51.26
+1022,Captain America,console,competitive,gold,4.59,50.21
+1022,Captain America,console,competitive,grandmaster,4.16,52.10
+1022,Captain America,console,competitive,platinum,4.18,50.72
+1022,Captain America,console,competitive,silver,5.07,49.73
+1023,Rocket Raccoon,pc,quickplay,all,13.99,55.23
+1023,Rocket Raccoon,pc,competitive,all,16.13,55.14
+1023,Rocket Raccoon,pc,competitive,bronze,11.99,55.18
+1023,Rocket Raccoon,pc,competitive,celestial and above,9.78,51.13
+1023,Rocket Raccoon,pc,competitive,diamond,17.10,54.47
+1023,Rocket Raccoon,pc,competitive,gold,17.87,55.42
+1023,Rocket Raccoon,pc,competitive,grandmaster,14.44,53.37
+1023,Rocket Raccoon,pc,competitive,platinum,18.20,55.22
+1023,Rocket Raccoon,pc,competitive,silver,15.44,55.47
+1023,Rocket Raccoon,console,quickplay,all,12.49,53.13
+1023,Rocket Raccoon,console,competitive,all,14.19,54.67
+1023,Rocket Raccoon,console,competitive,bronze,10.19,53.70
+1023,Rocket Raccoon,console,competitive,celestial and above,11.03,52.54
+1023,Rocket Raccoon,console,competitive,diamond,16.98,54.37
+1023,Rocket Raccoon,console,competitive,gold,14.57,55.14
+1023,Rocket Raccoon,console,competitive,grandmaster,15.33,54.06
+1023,Rocket Raccoon,console,competitive,platinum,16.24,54.93
+1023,Rocket Raccoon,console,competitive,silver,12.31,54.83
+1024,Hela,pc,quickplay,all,3.97,50.07
+1024,Hela,pc,competitive,all,5.60,49.52
+1024,Hela,pc,competitive,bronze,5.35,51.28
+1024,Hela,pc,competitive,celestial and above,10.69,49.28
+1024,Hela,pc,competitive,diamond,5.80,47.94
+1024,Hela,pc,competitive,gold,5.56,49.38
+1024,Hela,pc,competitive,grandmaster,7.14,48.64
+1024,Hela,pc,competitive,platinum,5.48,48.29
+1024,Hela,pc,competitive,silver,5.54,50.38
+1024,Hela,console,quickplay,all,2.33,45.80
+1024,Hela,console,competitive,all,2.68,47.76
+1024,Hela,console,competitive,bronze,2.71,48.50
+1024,Hela,console,competitive,celestial and above,4.67,48.01
+1024,Hela,console,competitive,diamond,2.75,46.69
+1024,Hela,console,competitive,gold,2.62,47.74
+1024,Hela,console,competitive,grandmaster,3.17,47.32
+1024,Hela,console,competitive,platinum,2.57,47.09
+1024,Hela,console,competitive,silver,2.65,48.52
+1025,Cloak & Dagger,pc,quickplay,all,18.84,51.42
+1025,Cloak & Dagger,pc,competitive,all,27.59,49.08
+1025,Cloak & Dagger,pc,competitive,bronze,23.39,49.81
+1025,Cloak & Dagger,pc,competitive,celestial and above,24.06,48.57
+1025,Cloak & Dagger,pc,competitive,diamond,29.18,49.19
+1025,Cloak & Dagger,pc,competitive,gold,28.45,48.79
+1025,Cloak & Dagger,pc,competitive,grandmaster,26.01,49.23
+1025,Cloak & Dagger,pc,competitive,platinum,30.48,48.86
+1025,Cloak & Dagger,pc,competitive,silver,26.53,49.03
+1025,Cloak & Dagger,console,quickplay,all,21.16,51.74
+1025,Cloak & Dagger,console,competitive,all,29.69,50.00
+1025,Cloak & Dagger,console,competitive,bronze,25.34,51.29
+1025,Cloak & Dagger,console,competitive,celestial and above,24.14,49.59
+1025,Cloak & Dagger,console,competitive,diamond,29.18,49.77
+1025,Cloak & Dagger,console,competitive,gold,31.18,49.75
+1025,Cloak & Dagger,console,competitive,grandmaster,24.80,49.80
+1025,Cloak & Dagger,console,competitive,platinum,33.21,49.59
+1025,Cloak & Dagger,console,competitive,silver,29.05,50.19
+1026,Black Panther,pc,quickplay,all,3.45,49.89
+1026,Black Panther,pc,competitive,all,2.83,53.55
+1026,Black Panther,pc,competitive,bronze,2.17,54.57
+1026,Black Panther,pc,competitive,celestial and above,3.92,51.28
+1026,Black Panther,pc,competitive,diamond,3.77,53.22
+1026,Black Panther,pc,competitive,gold,2.75,53.36
+1026,Black Panther,pc,competitive,grandmaster,4.72,52.51
+1026,Black Panther,pc,competitive,platinum,3.08,52.90
+1026,Black Panther,pc,competitive,silver,2.46,54.32
+1026,Black Panther,console,quickplay,all,3.31,47.97
+1026,Black Panther,console,competitive,all,2.51,52.64
+1026,Black Panther,console,competitive,bronze,1.89,51.90
+1026,Black Panther,console,competitive,celestial and above,5.08,51.95
+1026,Black Panther,console,competitive,diamond,3.37,53.14
+1026,Black Panther,console,competitive,gold,2.35,52.58
+1026,Black Panther,console,competitive,grandmaster,4.79,53.05
+1026,Black Panther,console,competitive,platinum,2.67,52.60
+1026,Black Panther,console,competitive,silver,2.07,52.70
+1027,Groot,pc,quickplay,all,11.01,50.32
+1027,Groot,pc,competitive,all,13.90,49.27
+1027,Groot,pc,competitive,bronze,13.05,49.10
+1027,Groot,pc,competitive,celestial and above,8.88,51.30
+1027,Groot,pc,competitive,diamond,13.26,49.86
+1027,Groot,pc,competitive,gold,14.62,49.17
+1027,Groot,pc,competitive,grandmaster,11.67,50.50
+1027,Groot,pc,competitive,platinum,14.29,49.38
+1027,Groot,pc,competitive,silver,14.17,48.92
+1027,Groot,console,quickplay,all,10.29,47.89
+1027,Groot,console,competitive,all,12.44,48.29
+1027,Groot,console,competitive,bronze,11.61,48.31
+1027,Groot,console,competitive,celestial and above,9.72,49.62
+1027,Groot,console,competitive,diamond,12.79,48.68
+1027,Groot,console,competitive,gold,12.67,48.10
+1027,Groot,console,competitive,grandmaster,12.28,49.39
+1027,Groot,console,competitive,platinum,12.65,48.20
+1027,Groot,console,competitive,silver,12.33,48.03
+1029,Magik,pc,quickplay,all,4.75,53.14
+1029,Magik,pc,competitive,all,4.00,55.29
+1029,Magik,pc,competitive,bronze,3.56,55.24
+1029,Magik,pc,competitive,celestial and above,6.40,54.65
+1029,Magik,pc,competitive,diamond,4.80,55.74
+1029,Magik,pc,competitive,gold,3.83,55.14
+1029,Magik,pc,competitive,grandmaster,6.14,55.49
+1029,Magik,pc,competitive,platinum,4.05,55.19
+1029,Magik,pc,competitive,silver,3.72,55.26
+1029,Magik,console,quickplay,all,4.83,52.58
+1029,Magik,console,competitive,all,5.43,56.29
+1029,Magik,console,competitive,bronze,3.73,56.11
+1029,Magik,console,competitive,celestial and above,11.74,55.36
+1029,Magik,console,competitive,diamond,7.73,56.68
+1029,Magik,console,competitive,gold,5.03,56.12
+1029,Magik,console,competitive,grandmaster,10.38,56.30
+1029,Magik,console,competitive,platinum,5.87,56.21
+1029,Magik,console,competitive,silver,4.44,56.34
+1030,Moon Knight,pc,quickplay,all,8.99,49.09
+1030,Moon Knight,pc,competitive,all,12.54,47.54
+1030,Moon Knight,pc,competitive,bronze,12.22,48.86
+1030,Moon Knight,pc,competitive,celestial and above,5.50,42.32
+1030,Moon Knight,pc,competitive,diamond,11.18,45.83
+1030,Moon Knight,pc,competitive,gold,13.41,47.56
+1030,Moon Knight,pc,competitive,grandmaster,8.60,44.21
+1030,Moon Knight,pc,competitive,platinum,12.52,46.90
+1030,Moon Knight,pc,competitive,silver,13.39,48.12
+1030,Moon Knight,console,quickplay,all,9.58,47.98
+1030,Moon Knight,console,competitive,all,12.26,47.84
+1030,Moon Knight,console,competitive,bronze,12.57,49.25
+1030,Moon Knight,console,competitive,celestial and above,5.24,41.91
+1030,Moon Knight,console,competitive,diamond,10.50,45.94
+1030,Moon Knight,console,competitive,gold,13.09,47.98
+1030,Moon Knight,console,competitive,grandmaster,8.07,43.97
+1030,Moon Knight,console,competitive,platinum,12.07,47.18
+1030,Moon Knight,console,competitive,silver,13.30,48.55
+1031,Luna Snow,pc,quickplay,all,12.61,48.97
+1031,Luna Snow,pc,competitive,all,16.65,47.88
+1031,Luna Snow,pc,competitive,bronze,14.04,48.57
+1031,Luna Snow,pc,competitive,celestial and above,19.38,49.73
+1031,Luna Snow,pc,competitive,diamond,18.05,48.21
+1031,Luna Snow,pc,competitive,gold,16.68,47.50
+1031,Luna Snow,pc,competitive,grandmaster,17.46,49.02
+1031,Luna Snow,pc,competitive,platinum,19.01,47.36
+1031,Luna Snow,pc,competitive,silver,15.32,47.92
+1031,Luna Snow,console,quickplay,all,9.49,47.78
+1031,Luna Snow,console,competitive,all,11.02,47.29
+1031,Luna Snow,console,competitive,bronze,9.23,48.33
+1031,Luna Snow,console,competitive,celestial and above,19.01,48.13
+1031,Luna Snow,console,competitive,diamond,12.91,46.87
+1031,Luna Snow,console,competitive,gold,10.35,47.18
+1031,Luna Snow,console,competitive,grandmaster,15.52,47.42
+1031,Luna Snow,console,competitive,platinum,11.70,46.70
+1031,Luna Snow,console,competitive,silver,9.67,47.82
+1032,Squirrel Girl,pc,quickplay,all,6.15,50.40
+1032,Squirrel Girl,pc,competitive,all,5.63,46.36
+1032,Squirrel Girl,pc,competitive,bronze,5.95,47.41
+1032,Squirrel Girl,pc,competitive,celestial and above,2.34,42.67
+1032,Squirrel Girl,pc,competitive,diamond,4.49,44.76
+1032,Squirrel Girl,pc,competitive,gold,6.02,46.28
+1032,Squirrel Girl,pc,competitive,grandmaster,3.56,43.79
+1032,Squirrel Girl,pc,competitive,platinum,5.22,45.72
+1032,Squirrel Girl,pc,competitive,silver,6.31,46.88
+1032,Squirrel Girl,console,quickplay,all,5.47,49.43
+1032,Squirrel Girl,console,competitive,all,6.55,47.80
+1032,Squirrel Girl,console,competitive,bronze,5.26,48.99
+1032,Squirrel Girl,console,competitive,celestial and above,3.87,43.63
+1032,Squirrel Girl,console,competitive,diamond,6.93,46.68
+1032,Squirrel Girl,console,competitive,gold,7.08,47.94
+1032,Squirrel Girl,console,competitive,grandmaster,5.80,45.18
+1032,Squirrel Girl,console,competitive,platinum,7.21,47.44
+1032,Squirrel Girl,console,competitive,silver,6.38,48.44
+1033,Black Widow,pc,quickplay,all,2.76,42.31
+1033,Black Widow,pc,competitive,all,0.89,42.51
+1033,Black Widow,pc,competitive,bronze,1.23,43.17
+1033,Black Widow,pc,competitive,celestial and above,1.29,43.03
+1033,Black Widow,pc,competitive,diamond,0.85,40.52
+1033,Black Widow,pc,competitive,gold,0.76,42.38
+1033,Black Widow,pc,competitive,grandmaster,1.06,40.85
+1033,Black Widow,pc,competitive,platinum,0.75,40.94
+1033,Black Widow,pc,competitive,silver,0.84,44.38
+1033,Black Widow,console,quickplay,all,1.71,37.90
+1033,Black Widow,console,competitive,all,0.47,37.54
+1033,Black Widow,console,competitive,bronze,0.70,37.79
+1033,Black Widow,console,competitive,celestial and above,0.54,35.53
+1033,Black Widow,console,competitive,diamond,0.41,35.64
+1033,Black Widow,console,competitive,gold,0.41,37.70
+1033,Black Widow,console,competitive,grandmaster,0.51,36.30
+1033,Black Widow,console,competitive,platinum,0.39,36.58
+1033,Black Widow,console,competitive,silver,0.45,39.17
+1034,Iron Man,pc,quickplay,all,5.83,50.08
+1034,Iron Man,pc,competitive,all,4.56,49.35
+1034,Iron Man,pc,competitive,bronze,6.48,48.18
+1034,Iron Man,pc,competitive,celestial and above,1.35,52.86
+1034,Iron Man,pc,competitive,diamond,2.72,51.68
+1034,Iron Man,pc,competitive,gold,4.44,49.54
+1034,Iron Man,pc,competitive,grandmaster,1.98,52.29
+1034,Iron Man,pc,competitive,platinum,3.49,50.50
+1034,Iron Man,pc,competitive,silver,5.40,48.90
+1034,Iron Man,console,quickplay,all,7.41,47.69
+1034,Iron Man,console,competitive,all,6.10,49.47
+1034,Iron Man,console,competitive,bronze,8.24,48.35
+1034,Iron Man,console,competitive,celestial and above,1.99,52.74
+1034,Iron Man,console,competitive,diamond,3.88,51.75
+1034,Iron Man,console,competitive,gold,6.15,49.45
+1034,Iron Man,console,competitive,grandmaster,2.66,52.22
+1034,Iron Man,console,competitive,platinum,5.10,50.69
+1034,Iron Man,console,competitive,silver,7.26,48.75
+1035,Venom,pc,quickplay,all,14.42,50.08
+1035,Venom,pc,competitive,all,9.95,47.64
+1035,Venom,pc,competitive,bronze,14.34,47.89
+1035,Venom,pc,competitive,celestial and above,4.02,49.18
+1035,Venom,pc,competitive,diamond,6.00,47.65
+1035,Venom,pc,competitive,gold,9.86,47.57
+1035,Venom,pc,competitive,grandmaster,4.94,48.91
+1035,Venom,pc,competitive,platinum,7.83,47.38
+1035,Venom,pc,competitive,silver,11.82,47.56
+1035,Venom,console,quickplay,all,14.10,47.76
+1035,Venom,console,competitive,all,9.07,47.16
+1035,Venom,console,competitive,bronze,13.24,47.86
+1035,Venom,console,competitive,celestial and above,4.28,49.34
+1035,Venom,console,competitive,diamond,6.27,46.53
+1035,Venom,console,competitive,gold,9.25,47.03
+1035,Venom,console,competitive,grandmaster,5.31,47.70
+1035,Venom,console,competitive,platinum,7.57,46.65
+1035,Venom,console,competitive,silver,10.90,47.31
+1036,Spider-man,pc,quickplay,all,6.96,49.45
+1036,Spider-man,pc,competitive,all,4.31,51.57
+1036,Spider-man,pc,competitive,bronze,4.38,52.06
+1036,Spider-man,pc,competitive,celestial and above,2.68,49.12
+1036,Spider-man,pc,competitive,diamond,3.86,50.77
+1036,Spider-man,pc,competitive,gold,4.51,51.56
+1036,Spider-man,pc,competitive,grandmaster,3.73,50.39
+1036,Spider-man,pc,competitive,platinum,4.25,51.01
+1036,Spider-man,pc,competitive,silver,4.46,52.20
+1036,Spider-man,console,quickplay,all,7.41,47.81
+1036,Spider-man,console,competitive,all,5.05,50.94
+1036,Spider-man,console,competitive,bronze,4.84,50.78
+1036,Spider-man,console,competitive,celestial and above,4.07,50.55
+1036,Spider-man,console,competitive,diamond,4.93,51.08
+1036,Spider-man,console,competitive,gold,5.23,50.91
+1036,Spider-man,console,competitive,grandmaster,4.89,50.95
+1036,Spider-man,console,competitive,platinum,5.18,50.89
+1036,Spider-man,console,competitive,silver,5.03,51.07
+1037,Magneto,pc,quickplay,all,12.60,50.43
+1037,Magneto,pc,competitive,all,14.25,48.49
+1037,Magneto,pc,competitive,bronze,10.93,49.17
+1037,Magneto,pc,competitive,celestial and above,32.86,49.96
+1037,Magneto,pc,competitive,diamond,20.89,48.59
+1037,Magneto,pc,competitive,gold,12.67,48.09
+1037,Magneto,pc,competitive,grandmaster,27.05,49.34
+1037,Magneto,pc,competitive,platinum,15.29,48.16
+1037,Magneto,pc,competitive,silver,11.49,48.42
+1037,Magneto,console,quickplay,all,12.14,49.82
+1037,Magneto,console,competitive,all,13.25,48.88
+1037,Magneto,console,competitive,bronze,11.29,50.07
+1037,Magneto,console,competitive,celestial and above,25.58,48.87
+1037,Magneto,console,competitive,diamond,16.47,48.23
+1037,Magneto,console,competitive,gold,12.11,48.93
+1037,Magneto,console,competitive,grandmaster,20.73,48.47
+1037,Magneto,console,competitive,platinum,13.09,48.42
+1037,Magneto,console,competitive,silver,11.62,49.50
+1038,Scarlet Witch,pc,quickplay,all,6.06,50.48
+1038,Scarlet Witch,pc,competitive,all,4.59,46.90
+1038,Scarlet Witch,pc,competitive,bronze,7.21,47.31
+1038,Scarlet Witch,pc,competitive,celestial and above,1.10,45.85
+1038,Scarlet Witch,pc,competitive,diamond,2.15,47.20
+1038,Scarlet Witch,pc,competitive,gold,4.34,46.60
+1038,Scarlet Witch,pc,competitive,grandmaster,1.66,47.20
+1038,Scarlet Witch,pc,competitive,platinum,3.04,46.76
+1038,Scarlet Witch,pc,competitive,silver,5.81,46.68
+1038,Scarlet Witch,console,quickplay,all,7.26,49.68
+1038,Scarlet Witch,console,competitive,all,8.14,48.70
+1038,Scarlet Witch,console,competitive,bronze,9.18,49.55
+1038,Scarlet Witch,console,competitive,celestial and above,2.61,47.34
+1038,Scarlet Witch,console,competitive,diamond,5.96,48.05
+1038,Scarlet Witch,console,competitive,gold,8.70,48.55
+1038,Scarlet Witch,console,competitive,grandmaster,4.39,47.89
+1038,Scarlet Witch,console,competitive,platinum,7.45,48.22
+1038,Scarlet Witch,console,competitive,silver,9.49,48.83
+1039,Thor,pc,quickplay,all,13.23,54.71
+1039,Thor,pc,competitive,all,12.11,52.52
+1039,Thor,pc,competitive,bronze,12.11,52.78
+1039,Thor,pc,competitive,celestial and above,6.46,51.26
+1039,Thor,pc,competitive,diamond,11.21,51.98
+1039,Thor,pc,competitive,gold,12.63,52.63
+1039,Thor,pc,competitive,grandmaster,9.21,51.70
+1039,Thor,pc,competitive,platinum,12.29,52.45
+1039,Thor,pc,competitive,silver,12.43,52.63
+1039,Thor,console,quickplay,all,13.22,52.85
+1039,Thor,console,competitive,all,12.98,52.19
+1039,Thor,console,competitive,bronze,12.40,52.57
+1039,Thor,console,competitive,celestial and above,10.08,51.35
+1039,Thor,console,competitive,diamond,13.59,51.77
+1039,Thor,console,competitive,gold,13.03,52.31
+1039,Thor,console,competitive,grandmaster,13.05,51.72
+1039,Thor,console,competitive,platinum,13.19,52.13
+1039,Thor,console,competitive,silver,12.69,52.33
+1040,Mister Fantastic,pc,quickplay,all,5.03,53.99
+1040,Mister Fantastic,pc,competitive,all,2.86,52.17
+1040,Mister Fantastic,pc,competitive,bronze,4.68,53.45
+1040,Mister Fantastic,pc,competitive,celestial and above,1.65,50.48
+1040,Mister Fantastic,pc,competitive,diamond,1.62,50.88
+1040,Mister Fantastic,pc,competitive,gold,2.56,51.42
+1040,Mister Fantastic,pc,competitive,grandmaster,1.69,50.63
+1040,Mister Fantastic,pc,competitive,platinum,1.88,50.98
+1040,Mister Fantastic,pc,competitive,silver,3.37,52.30
+1040,Mister Fantastic,console,quickplay,all,6.11,53.50
+1040,Mister Fantastic,console,competitive,all,4.90,53.33
+1040,Mister Fantastic,console,competitive,bronze,7.02,54.39
+1040,Mister Fantastic,console,competitive,celestial and above,3.10,51.45
+1040,Mister Fantastic,console,competitive,diamond,3.28,52.31
+1040,Mister Fantastic,console,competitive,gold,4.77,53.00
+1040,Mister Fantastic,console,competitive,grandmaster,3.27,52.07
+1040,Mister Fantastic,console,competitive,platinum,3.76,52.47
+1040,Mister Fantastic,console,competitive,silver,5.71,53.58
+1041,Winter Soldier,pc,quickplay,all,8.09,50.38
+1041,Winter Soldier,pc,competitive,all,10.06,51.28
+1041,Winter Soldier,pc,competitive,bronze,7.24,51.51
+1041,Winter Soldier,pc,competitive,celestial and above,17.10,48.48
+1041,Winter Soldier,pc,competitive,diamond,14.46,50.83
+1041,Winter Soldier,pc,competitive,gold,9.51,51.53
+1041,Winter Soldier,pc,competitive,grandmaster,17.18,49.90
+1041,Winter Soldier,pc,competitive,platinum,11.40,51.27
+1041,Winter Soldier,pc,competitive,silver,8.28,51.77
+1041,Winter Soldier,console,quickplay,all,8.16,48.66
+1041,Winter Soldier,console,competitive,all,9.25,51.17
+1041,Winter Soldier,console,competitive,bronze,7.31,50.69
+1041,Winter Soldier,console,competitive,celestial and above,18.54,49.28
+1041,Winter Soldier,console,competitive,diamond,12.66,51.10
+1041,Winter Soldier,console,competitive,gold,8.42,51.51
+1041,Winter Soldier,console,competitive,grandmaster,16.20,50.48
+1041,Winter Soldier,console,competitive,platinum,9.84,51.36
+1041,Winter Soldier,console,competitive,silver,7.66,51.37
+1042,Peni Parker,pc,quickplay,all,14.29,54.82
+1042,Peni Parker,pc,competitive,all,13.03,51.49
+1042,Peni Parker,pc,competitive,bronze,16.88,52.12
+1042,Peni Parker,pc,competitive,celestial and above,1.41,48.34
+1042,Peni Parker,pc,competitive,diamond,6.91,50.42
+1042,Peni Parker,pc,competitive,gold,14.09,51.46
+1042,Peni Parker,pc,competitive,grandmaster,3.63,49.59
+1042,Peni Parker,pc,competitive,platinum,10.98,51.25
+1042,Peni Parker,pc,competitive,silver,16.00,51.50
+1042,Peni Parker,console,quickplay,all,15.98,54.17
+1042,Peni Parker,console,competitive,all,17.02,51.63
+1042,Peni Parker,console,competitive,bronze,19.95,53.32
+1042,Peni Parker,console,competitive,celestial and above,2.76,46.40
+1042,Peni Parker,console,competitive,diamond,11.75,49.91
+1042,Peni Parker,console,competitive,gold,19.02,51.65
+1042,Peni Parker,console,competitive,grandmaster,7.03,48.32
+1042,Peni Parker,console,competitive,platinum,16.27,50.93
+1042,Peni Parker,console,competitive,silver,20.29,52.17
+1043,Star-lord,pc,quickplay,all,5.90,49.15
+1043,Star-lord,pc,competitive,all,5.17,48.61
+1043,Star-lord,pc,competitive,bronze,6.32,47.93
+1043,Star-lord,pc,competitive,celestial and above,6.70,49.83
+1043,Star-lord,pc,competitive,diamond,4.70,49.49
+1043,Star-lord,pc,competitive,gold,4.80,48.59
+1043,Star-lord,pc,competitive,grandmaster,5.65,50.52
+1043,Star-lord,pc,competitive,platinum,4.45,48.95
+1043,Star-lord,pc,competitive,silver,5.36,48.31
+1043,Star-lord,console,quickplay,all,6.00,46.91
+1043,Star-lord,console,competitive,all,5.11,48.02
+1043,Star-lord,console,competitive,bronze,6.38,47.37
+1043,Star-lord,console,competitive,celestial and above,5.23,49.95
+1043,Star-lord,console,competitive,diamond,4.36,48.67
+1043,Star-lord,console,competitive,gold,4.89,48.09
+1043,Star-lord,console,competitive,grandmaster,4.63,49.34
+1043,Star-lord,console,competitive,platinum,4.42,48.34
+1043,Star-lord,console,competitive,silver,5.49,47.80
+1045,Namor,pc,quickplay,all,4.19,50.72
+1045,Namor,pc,competitive,all,7.07,48.21
+1045,Namor,pc,competitive,bronze,4.69,50.33
+1045,Namor,pc,competitive,celestial and above,11.41,49.68
+1045,Namor,pc,competitive,diamond,9.49,47.48
+1045,Namor,pc,competitive,gold,7.07,47.87
+1045,Namor,pc,competitive,grandmaster,9.60,48.04
+1045,Namor,pc,competitive,platinum,8.72,47.37
+1045,Namor,pc,competitive,silver,5.85,48.93
+1045,Namor,console,quickplay,all,4.00,49.68
+1045,Namor,console,competitive,all,6.79,47.81
+1045,Namor,console,competitive,bronze,4.60,49.82
+1045,Namor,console,competitive,celestial and above,10.53,47.51
+1045,Namor,console,competitive,diamond,8.97,46.65
+1045,Namor,console,competitive,gold,6.71,47.94
+1045,Namor,console,competitive,grandmaster,9.36,46.70
+1045,Namor,console,competitive,platinum,7.99,47.10
+1045,Namor,console,competitive,silver,5.67,48.75
+1046,Adam Warlock,pc,quickplay,all,6.59,52.42
+1046,Adam Warlock,pc,competitive,all,3.35,50.82
+1046,Adam Warlock,pc,competitive,bronze,4.94,51.66
+1046,Adam Warlock,pc,competitive,celestial and above,2.23,49.71
+1046,Adam Warlock,pc,competitive,diamond,2.09,48.74
+1046,Adam Warlock,pc,competitive,gold,3.25,50.70
+1046,Adam Warlock,pc,competitive,grandmaster,2.17,49.14
+1046,Adam Warlock,pc,competitive,platinum,2.48,49.88
+1046,Adam Warlock,pc,competitive,silver,4.05,51.50
+1046,Adam Warlock,console,quickplay,all,6.60,51.26
+1046,Adam Warlock,console,competitive,all,3.93,50.49
+1046,Adam Warlock,console,competitive,bronze,5.69,51.60
+1046,Adam Warlock,console,competitive,celestial and above,1.55,48.56
+1046,Adam Warlock,console,competitive,diamond,2.47,48.07
+1046,Adam Warlock,console,competitive,gold,4.10,50.66
+1046,Adam Warlock,console,competitive,grandmaster,2.02,47.75
+1046,Adam Warlock,console,competitive,platinum,3.11,49.60
+1046,Adam Warlock,console,competitive,silver,4.91,51.18
+1047,Jeff The Land Shark,pc,quickplay,all,11.39,44.61
+1047,Jeff The Land Shark,pc,competitive,all,5.42,43.17
+1047,Jeff The Land Shark,pc,competitive,bronze,9.91,43.25
+1047,Jeff The Land Shark,pc,competitive,celestial and above,2.61,49.43
+1047,Jeff The Land Shark,pc,competitive,diamond,2.41,43.75
+1047,Jeff The Land Shark,pc,competitive,gold,4.84,42.88
+1047,Jeff The Land Shark,pc,competitive,grandmaster,2.35,46.20
+1047,Jeff The Land Shark,pc,competitive,platinum,3.23,43.26
+1047,Jeff The Land Shark,pc,competitive,silver,7.01,42.90
+1047,Jeff The Land Shark,console,quickplay,all,12.51,43.24
+1047,Jeff The Land Shark,console,competitive,all,6.22,42.66
+1047,Jeff The Land Shark,console,competitive,bronze,10.74,43.57
+1047,Jeff The Land Shark,console,competitive,celestial and above,2.12,46.67
+1047,Jeff The Land Shark,console,competitive,diamond,3.10,41.69
+1047,Jeff The Land Shark,console,competitive,gold,6.17,42.19
+1047,Jeff The Land Shark,console,competitive,grandmaster,2.47,43.48
+1047,Jeff The Land Shark,console,competitive,platinum,4.30,41.65
+1047,Jeff The Land Shark,console,competitive,silver,8.26,42.92
+1048,Psylocke,pc,quickplay,all,6.50,50.17
+1048,Psylocke,pc,competitive,all,7.01,51.10
+1048,Psylocke,pc,competitive,bronze,6.78,50.93
+1048,Psylocke,pc,competitive,celestial and above,7.91,50.80
+1048,Psylocke,pc,competitive,diamond,7.53,51.00
+1048,Psylocke,pc,competitive,gold,6.93,51.24
+1048,Psylocke,pc,competitive,grandmaster,7.84,50.79
+1048,Psylocke,pc,competitive,platinum,7.09,51.11
+1048,Psylocke,pc,competitive,silver,6.79,51.21
+1048,Psylocke,console,quickplay,all,4.74,46.81
+1048,Psylocke,console,competitive,all,4.35,48.96
+1048,Psylocke,console,competitive,bronze,4.38,48.50
+1048,Psylocke,console,competitive,celestial and above,5.30,49.76
+1048,Psylocke,console,competitive,diamond,4.54,49.27
+1048,Psylocke,console,competitive,gold,4.26,48.92
+1048,Psylocke,console,competitive,grandmaster,4.91,49.50
+1048,Psylocke,console,competitive,platinum,4.26,49.23
+1048,Psylocke,console,competitive,silver,4.27,48.78
+1049,Wolverine,pc,quickplay,all,3.69,49.41
+1049,Wolverine,pc,competitive,all,3.33,51.10
+1049,Wolverine,pc,competitive,bronze,2.27,49.29
+1049,Wolverine,pc,competitive,celestial and above,3.42,54.61
+1049,Wolverine,pc,competitive,diamond,4.07,53.29
+1049,Wolverine,pc,competitive,gold,3.43,50.65
+1049,Wolverine,pc,competitive,grandmaster,2.83,54.84
+1049,Wolverine,pc,competitive,platinum,4.48,51.33
+1049,Wolverine,pc,competitive,silver,2.75,50.25
+1049,Wolverine,console,quickplay,all,3.96,48.07
+1049,Wolverine,console,competitive,all,3.30,50.78
+1049,Wolverine,console,competitive,bronze,2.42,48.73
+1049,Wolverine,console,competitive,celestial and above,4.06,54.63
+1049,Wolverine,console,competitive,diamond,4.26,52.77
+1049,Wolverine,console,competitive,gold,3.18,50.26
+1049,Wolverine,console,competitive,grandmaster,3.43,54.15
+1049,Wolverine,console,competitive,platinum,4.16,50.99
+1049,Wolverine,console,competitive,silver,2.66,49.79
+1050,Invisible Woman,pc,quickplay,all,18.12,50.17
+1050,Invisible Woman,pc,competitive,all,16.31,48.68
+1050,Invisible Woman,pc,competitive,bronze,18.04,49.89
+1050,Invisible Woman,pc,competitive,celestial and above,20.63,48.09
+1050,Invisible Woman,pc,competitive,diamond,17.75,47.83
+1050,Invisible Woman,pc,competitive,gold,15.19,48.46
+1050,Invisible Woman,pc,competitive,grandmaster,20.98,48.00
+1050,Invisible Woman,pc,competitive,platinum,14.50,48.25
+1050,Invisible Woman,pc,competitive,silver,16.17,48.93
+1050,Invisible Woman,console,quickplay,all,20.08,49.98
+1050,Invisible Woman,console,competitive,all,19.22,48.80
+1050,Invisible Woman,console,competitive,bronze,20.78,50.01
+1050,Invisible Woman,console,competitive,celestial and above,22.73,48.32
+1050,Invisible Woman,console,competitive,diamond,20.44,48.22
+1050,Invisible Woman,console,competitive,gold,18.24,48.61
+1050,Invisible Woman,console,competitive,grandmaster,23.05,48.34
+1050,Invisible Woman,console,competitive,platinum,17.63,48.29
+1050,Invisible Woman,console,competitive,silver,19.02,49.14
+1051,The Thing,,,,,
+1052,Iron Fist,pc,quickplay,all,3.11,49.95
+1052,Iron Fist,pc,competitive,all,1.85,49.61
+1052,Iron Fist,pc,competitive,bronze,2.56,48.69
+1052,Iron Fist,pc,competitive,celestial and above,1.86,51.53
+1052,Iron Fist,pc,competitive,diamond,1.49,51.45
+1052,Iron Fist,pc,competitive,gold,1.66,49.55
+1052,Iron Fist,pc,competitive,grandmaster,1.92,52.43
+1052,Iron Fist,pc,competitive,platinum,1.45,50.25
+1052,Iron Fist,pc,competitive,silver,2.00,49.11
+1052,Iron Fist,console,quickplay,all,3.77,48.42
+1052,Iron Fist,console,competitive,all,2.52,50.25
+1052,Iron Fist,console,competitive,bronze,3.28,49.66
+1052,Iron Fist,console,competitive,celestial and above,2.48,53.39
+1052,Iron Fist,console,competitive,diamond,1.99,51.39
+1052,Iron Fist,console,competitive,gold,2.39,50.11
+1052,Iron Fist,console,competitive,grandmaster,2.30,52.50
+1052,Iron Fist,console,competitive,platinum,2.09,50.35
+1052,Iron Fist,console,competitive,silver,2.78,50.00
