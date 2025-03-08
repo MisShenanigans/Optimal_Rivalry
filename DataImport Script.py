@@ -109,6 +109,9 @@ NumMatches_df = NumMatches_df.T
 WinRate_df.to_csv("MarvelRivals_WinRate_Matrix.csv", index=True)
 NumMatches_df.to_csv("MarvelRivals_NumMatches_Matrix.csv", index=True)
 
+min_value = WinRate_df.min().min()
+max_value = WinRate_df.max().max()
+
 win_rates = WinRate_df.astype(float).values.flatten()
 num_matches = NumMatches_df.astype(float).values.flatten()
 valid_indices = np.isfinite(win_rates) & np.isfinite(num_matches)
@@ -118,9 +121,9 @@ num_matches = num_matches[valid_indices]
 kde = gaussian_kde(win_rates, weights=num_matches)
 
 def utility_score(kde, winrate):
-    total_cdf, _ = quad(kde, 38, 62)
-    cdf, _ = quad(kde, 38, winrate)
-    utility = ((cdf - (total_cdf / 2)) / (total_cdf / 2))
+    total_cdf, _ = quad(kde, min_value, max_value)
+    cdf, _ = quad(kde, max_value, winrate)
+    utility = ((cdf - (total_cdf / 2)) / (total_cdf/2))
     return round(utility, 2)
 
 Payoff_df = WinRate_df.copy()
