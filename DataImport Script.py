@@ -29,7 +29,6 @@ headers = {
 }
 
 def format_hero_name(hero_name):
-    """Converts hero names to the correct URL format."""
     if hero_name == "Cloak & Dagger":
         return "cloak-dagger"  # Special case
     return hero_name.lower().replace(" ", "-")
@@ -106,7 +105,9 @@ NumMatches_df = NumMatches_df.loc[sorted_heroes]
 
 WinRate_df = WinRate_df.T
 NumMatches_df = NumMatches_df.T
+print(f"Outporting MarvelRivals_WinRate_Matrix.csv")
 WinRate_df.to_csv("MarvelRivals_WinRate_Matrix.csv", index=True)
+print(f"Outporting MarvelRivals_NumMatches_Matrix.csv")
 NumMatches_df.to_csv("MarvelRivals_NumMatches_Matrix.csv", index=True)
 
 min_value = WinRate_df.min().min()
@@ -128,11 +129,13 @@ def utility_score(kde, winrate):
 
 Payoff_df = WinRate_df.copy()
 
+print(f"Making Payoff Dataframe")
 for row_hero in WinRate_df.index:
     for col_hero in WinRate_df.columns:
         winrate = WinRate_df.at[row_hero, col_hero]
         Payoff_df.at[row_hero, col_hero] = utility_score(kde, winrate)
 
+print(f"Outporting MarvelRivals_Payoff_Matrix.csv")
 Payoff_df.to_csv("MarvelRivals_Payoff_Matrix.csv", index_col=0)
 
 
