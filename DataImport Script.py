@@ -8,7 +8,7 @@ from scipy.stats import gaussian_kde
 from scipy.integrate import quad
 
 vanguards = sorted([
-    "Venom", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker", "Captain America"
+    "Venom", "Emma Frost", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker", "Captain America"
 ])
 
 duelists = sorted([
