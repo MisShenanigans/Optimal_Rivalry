@@ -62,49 +62,58 @@ for hero in sorted_heroes:
     matchup_data[hero] = 50.0
     win_rate_series = pd.Series(matchup_data, name=hero)
     WinRate_df[hero] = win_rate_series
-    time.sleep(2)
+    time.sleep(0.5)
 WinRate_df = WinRate_df.loc[sorted_heroes]
 
-NumMatches_df = pd.DataFrame(index=sorted_heroes)
+NumMatchesdf = pd.DataFrame(index=sorted_heroes)
 
 for hero in sorted_heroes:
     print(f"Fetching match counts for {hero}...")
+
     hero_url_name = format_hero_name(hero)
     url = base_url.format(hero_url_name)
     response = requests.get(url, headers=headers)
+
     if response.status_code != 200:
         print(f"Failed to fetch {hero}, status code: {response.status_code}")
         continue
+
     soup = BeautifulSoup(response.text, "html.parser")
     tables = soup.find_all("tbody")
+
     match_count_data = {}
+
     for table in tables:
         for row in table.find_all("tr"):
             columns = row.find_all("td")
-            if len(columns) < 3:
+            if len(columns) < 4:
                 continue 
-            opponent_name_tag = columns[0].find("img", class_="hero-img")
-            if opponent_name_tag:
-                opponent_name = opponent_name_tag["alt"].strip()
-            else:
+
+            opponent_tag = columns[0].find("img", class_="hero-img")
+            if not opponent_tag:
                 continue
-            match_count_text = columns[2].text.strip().replace(",", "")  # Remove commas
-            if match_count_text.isdigit():
-                match_count = int(match_count_text)
-            else:
-                continue  
-            if opponent_name in sorted_heroes: 
+
+            opponent_name = opponent_tag["alt"].strip()
+
+            match_count_text = columns[3].text.strip().replace(",", "")
+            if not match_count_text.isdigit():
+                continue
+
+            match_count = int(match_count_text)
+
+            if opponent_name in sorted_heroes:
                 match_count_data[opponent_name] = match_count
+
     if match_count_data:
         match_count_data[hero] = int(np.mean(list(match_count_data.values())))
-    match_count_series = pd.Series(match_count_data, name=hero)
-    NumMatches_df[hero] = match_count_series
-    time.sleep(2)
 
-NumMatches_df = NumMatches_df.loc[sorted_heroes]
+    NumMatchesdf[hero] = pd.Series(match_count_data, name=hero)
+    time.sleep(0.5)
+
+NumMatchesdf = NumMatchesdf.loc[sorted_heroes]
 
 WinRate_df = WinRate_df.T
-NumMatches_df = NumMatches_df.T
+NumMatches_df = NumMatchesdf.T
 print(f"Outporting MarvelRivals_WinRate_Matrix.csv")
 WinRate_df.to_csv("MarvelRivals_WinRate_Matrix.csv", index=True)
 print(f"Outporting MarvelRivals_NumMatches_Matrix.csv")
@@ -121,10 +130,10 @@ num_matches = num_matches[valid_indices]
 
 kde = gaussian_kde(win_rates, weights=num_matches)
 
-def utility_score(kde, winrate):
+def utility_score(kde, winrate, min_value, max_value):
     total_cdf, _ = quad(kde, min_value, max_value)
-    cdf, _ = quad(kde, max_value, winrate)
-    utility = ((cdf - (total_cdf / 2)) / (total_cdf/2))
+    cdf, _ = quad(kde, min_value, winrate)
+    utility = ((cdf - (total_cdf / 2)) / (total_cdf / 2))
     return round(utility, 2)
 
 Payoff_df = WinRate_df.copy()
@@ -133,10 +142,12 @@ print(f"Making Payoff Dataframe")
 for row_hero in WinRate_df.index:
     for col_hero in WinRate_df.columns:
         winrate = WinRate_df.at[row_hero, col_hero]
-        Payoff_df.at[row_hero, col_hero] = utility_score(kde, winrate)
+        Payoff_df.at[row_hero, col_hero] = utility_score(kde, winrate, min_value, max_value)
+
+Payoff_df = Payoff_df.astype(float)
 
 print(f"Outporting MarvelRivals_Payoff_Matrix.csv")
-Payoff_df.to_csv("MarvelRivals_Payoff_Matrix.csv", index_col=0)
+Payoff_df.to_csv("MarvelRivals_Payoff_Matrix.csv", index=True)
 
 
 
