@@ -8,18 +8,19 @@ from scipy.stats import gaussian_kde
 from scipy.integrate import quad
 
 vanguards = sorted([
-    "Venom", "Emma Frost", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker", "Captain America"
+    "Venom", "Emma Frost", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker", "Captain America", "Rogue", "Angela"
 ])
 
 duelists = sorted([
     "Moon Knight", "Squirrel Girl", "Human Torch", "Black Widow", "Namor", "The Punisher",
     "Hawkeye", "Scarlet Witch", "Psylocke", "Winter Soldier", "Wolverine", "Iron Man", "Hela",
-    "Mister Fantastic", "Spider Man", "Iron Fist", "Star Lord", "Black Panther", "Storm", "Magik"
+    "Mister Fantastic", "Spider Man", "Iron Fist", "Star Lord", "Black Panther", "Storm", "Magik", 
+    "Phoenix", "Blade", "Daredevil"
 ])
 
 strategists = sorted([
     "Jeff The Land Shark", "Luna Snow", "Cloak & Dagger", "Invisible Woman", "Adam Warlock",
-    "Loki", "Mantis", "Rocket Raccoon"
+    "Loki", "Mantis", "Rocket Raccoon", "Gambit", "Ultron"
 ])
 sorted_heroes = vanguards + duelists + strategists
 WinRate_df = pd.DataFrame(index=sorted_heroes)
