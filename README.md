@@ -20,7 +20,7 @@ We build a game-theoretic model around team selection in Marvel Rivals, treating
 
 | File | Description |
 |------|-------------|
-| `dataImport_Script.py` | Script to scrape and update the latest win rate and matchup data from [rivalsmeta.com](https://rivalsmeta.com/) |
+| `DataImport Script.py` | Script to scrape and update the latest win rate and matchup data from [rivalsmeta.com](https://rivalsmeta.com/) |
 | `main.ipynb` | Full implementation of all optimization problems discussed in the project |
 | `MarvelRivals_WinRate_Matrix.csv` | Raw win rate matrix (unprocessed) |
 | `MarvelRivals_NumMatches_Matrix.csv` | Matrix of total match counts between heroes |
@@ -48,14 +48,29 @@ All matchup data was obtained from:
 
 ## How to Run
 
-1. **Update data**: Run `dataImport_Script.py` to scrape the latest character matchup data.
-2. **Solve problems**: Open `main.ipynb` for the full suite of optimization tools and demonstrations.
+1. **Install dependencies**: `python3 -m pip install -r requirements.txt`
+2. **Update data**: Run `python3 "DataImport Script.py"`, or run all cells in `dataimport Script.ipynb`. The notebook contains the scraper in separate, inspectable cells, with cached downloads and retry support.
+3. **Solve problems**: Open `main.ipynb` for the full suite of optimization tools and demonstrations.
 
+
+The scraper reads the **Win Rate** and **Matches** table headings and normalizes
+hero names using their URL slugs. Add newly released heroes to the role lists in
+`DataImport Script.py`; an unknown or missing hero produces an explicit error.
+All pages and the payoff calculation must succeed before the three CSVs are
+written, so a failed scrape cannot replace them with empty matrices.
+
+Rows represent the selected hero; columns represent the opponent. As in the
+original model, diagonal win rates are set to 50%, and diagonal match counts
+are the integer mean of that hero's opponent counts (synthetic, not scraped).
+The source describes these matchups as Diamond through One Above All, updated
+daily; the scraper uses the website's default dataset.
+
+Run the offline regression checks with `python3 -m unittest discover -s tests -v`.
 
 ---
 
 ## Last Updated
 
-March 17, 2025
+September 23, 2026
 
 

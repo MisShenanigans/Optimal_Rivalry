@@ -1,154 +1,161 @@
+"""Fetch Rivals Meta matchups; rows are heroes and columns are opponents."""
+
+from pathlib import Path
+import re
+import time
+
+import numpy as np
+import pandas as pd
 import requests
 from bs4 import BeautifulSoup
-import pandas as pd
-import time
-import numpy as np
-import matplotlib.pyplot as plt
+from requests.adapters import HTTPAdapter
 from scipy.stats import gaussian_kde
-from scipy.integrate import quad
+from urllib3.util.retry import Retry
 
 vanguards = sorted([
-    "Venom", "Emma Frost", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker", "Captain America", "Rogue", "Angela"
+    "Venom", "Emma Frost", "Magneto", "Doctor Strange", "The Thing", "Groot", "Hulk", "Thor", "Peni Parker",
+    "Captain America", "Rogue", "Angela", "Deadpool Vanguard", "The Hood", "Devil Dinosaur"
 ])
 
 duelists = sorted([
     "Moon Knight", "Squirrel Girl", "Human Torch", "Black Widow", "Namor", "The Punisher",
     "Hawkeye", "Scarlet Witch", "Psylocke", "Winter Soldier", "Wolverine", "Iron Man", "Hela",
-    "Mister Fantastic", "Spider Man", "Iron Fist", "Star Lord", "Black Panther", "Storm", "Magik", 
-    "Phoenix", "Blade", "Daredevil"
+    "Mister Fantastic", "Spider Man", "Iron Fist", "Star Lord", "Black Panther", "Storm", "Magik",
+    "Phoenix", "Blade", "Daredevil", "Deadpool Duelist", "Cyclops", "Gorr The God Butcher", "Elsa Bloodstone",
+    "Black Cat"
 ])
 
 strategists = sorted([
     "Jeff The Land Shark", "Luna Snow", "Cloak & Dagger", "Invisible Woman", "Adam Warlock",
-    "Loki", "Mantis", "Rocket Raccoon", "Gambit", "Ultron"
+    "Loki", "Mantis", "Rocket Raccoon", "Gambit", "Ultron", "Deadpool Strategist", "Jubilee", "White Fox",
 ])
+
 sorted_heroes = vanguards + duelists + strategists
-WinRate_df = pd.DataFrame(index=sorted_heroes)
-base_url = "https://rivalsmeta.com/characters/{}/matchups"
-headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-}
+BASE_URL = "https://rivalsmeta.com/characters/{}/matchups"
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; OptimalRivalry/1.0)"}
+
 
 def format_hero_name(hero_name):
-    if hero_name == "Cloak & Dagger":
-        return "cloak-dagger"  # Special case
-    return hero_name.lower().replace(" ", "-")
+    """Use the URL slug as identity, independent of punctuation/display names."""
+    name = hero_name.lower().replace("&", " ")
+    return re.sub(r"[^a-z0-9]+", "-", name).strip("-")
 
 
-for hero in sorted_heroes:
-    print(f"Fetching matchups for {hero}...")
-    hero_url_name = format_hero_name(hero)
-    url = base_url.format(hero_url_name)
-    response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        print(f"Failed to fetch {hero}, status code: {response.status_code}")
-        continue
-    soup = BeautifulSoup(response.text, "html.parser")
-    tables = soup.find_all("tbody")
-    matchup_data = {}
-    for table in tables:
-        for row in table.find_all("tr"):
-            columns = row.find_all("td")
-            if len(columns) < 3:
-                continue 
-            opponent_name_tag = columns[0].find("img", class_="hero-img")
-            if opponent_name_tag:
-                opponent_name = opponent_name_tag["alt"].strip()
+def parse_matchups(html, hero, heroes=None):
+    """Read named columns, without depending on image classes or cell order."""
+    heroes = sorted_heroes if heroes is None else list(heroes)
+    names_by_slug = {format_hero_name(name): name for name in heroes}
+    soup = BeautifulSoup(html, "html.parser")
+    matchups = {}
+    for table in soup.find_all("table"):
+        headings = [th.get_text(" ", strip=True).casefold()
+                    for th in table.select("thead th")]
+        if not {"hero", "win rate", "matches"}.issubset(headings):
+            continue
+        hero_col, rate_col, matches_col = (
+            headings.index(name) for name in ("hero", "win rate", "matches")
+        )
+        for row in table.select("tbody tr"):
+            cells = row.find_all("td", recursive=False)
+            if len(cells) <= max(hero_col, rate_col, matches_col):
+                raise ValueError(f"{hero}: incomplete matchup row")
+            hero_cell = cells[hero_col]
+            link = hero_cell.find("a", href=re.compile(r"^/characters/"))
+            if link:
+                slug = link["href"].split("/")[2]
             else:
-                continue
-            win_rate = columns[1].text.strip().replace("%", "")
-            if opponent_name in sorted_heroes:  # Ensure the opponent is a valid in-game hero
-                matchup_data[opponent_name] = float(win_rate)
+                img = hero_cell.find("img", alt=True)
+                name = img["alt"] if img else hero_cell.get_text(" ", strip=True)
+                slug = format_hero_name(name)
+            opponent = names_by_slug.get(slug)
+            if opponent is None:
+                raise ValueError(f"{hero}: unknown opponent {slug!r}; update the hero lists")
+            rate_text = cells[rate_col].get_text("", strip=True)
+            count_text = re.sub(r"[,\s]", "", cells[matches_col].get_text(strip=True))
+            if not re.fullmatch(r"\d+(?:\.\d+)?\s*%", rate_text):
+                raise ValueError(f"{hero} vs {opponent}: invalid win rate {rate_text!r}")
+            if not re.fullmatch(r"\d+", count_text):
+                raise ValueError(f"{hero} vs {opponent}: invalid match count {count_text!r}")
+            rate, count = float(rate_text.rstrip("%")), int(count_text)
+            if not 0 <= rate <= 100 or count <= 0:
+                raise ValueError(f"{hero} vs {opponent}: win rate/count out of range")
+            if opponent in matchups:
+                raise ValueError(f"{hero}: duplicate matchup for {opponent}")
+            matchups[opponent] = (rate, count)
 
-    matchup_data[hero] = 50.0
-    win_rate_series = pd.Series(matchup_data, name=hero)
-    WinRate_df[hero] = win_rate_series
-    time.sleep(0.5)
-WinRate_df = WinRate_df.loc[sorted_heroes]
-
-NumMatchesdf = pd.DataFrame(index=sorted_heroes)
-
-for hero in sorted_heroes:
-    print(f"Fetching match counts for {hero}...")
-
-    hero_url_name = format_hero_name(hero)
-    url = base_url.format(hero_url_name)
-    response = requests.get(url, headers=headers)
-
-    if response.status_code != 200:
-        print(f"Failed to fetch {hero}, status code: {response.status_code}")
-        continue
-
-    soup = BeautifulSoup(response.text, "html.parser")
-    tables = soup.find_all("tbody")
-
-    match_count_data = {}
-
-    for table in tables:
-        for row in table.find_all("tr"):
-            columns = row.find_all("td")
-            if len(columns) < 4:
-                continue 
-
-            opponent_tag = columns[0].find("img", class_="hero-img")
-            if not opponent_tag:
-                continue
-
-            opponent_name = opponent_tag["alt"].strip()
-
-            match_count_text = columns[3].text.strip().replace(",", "")
-            if not match_count_text.isdigit():
-                continue
-
-            match_count = int(match_count_text)
-
-            if opponent_name in sorted_heroes:
-                match_count_data[opponent_name] = match_count
-
-    if match_count_data:
-        match_count_data[hero] = int(np.mean(list(match_count_data.values())))
-
-    NumMatchesdf[hero] = pd.Series(match_count_data, name=hero)
-    time.sleep(0.5)
-
-NumMatchesdf = NumMatchesdf.loc[sorted_heroes]
-
-WinRate_df = WinRate_df.T
-NumMatches_df = NumMatchesdf.T
-print(f"Outporting MarvelRivals_WinRate_Matrix.csv")
-WinRate_df.to_csv("MarvelRivals_WinRate_Matrix.csv", index=True)
-print(f"Outporting MarvelRivals_NumMatches_Matrix.csv")
-NumMatches_df.to_csv("MarvelRivals_NumMatches_Matrix.csv", index=True)
-
-min_value = WinRate_df.min().min()
-max_value = WinRate_df.max().max()
-
-win_rates = WinRate_df.astype(float).values.flatten()
-num_matches = NumMatches_df.astype(float).values.flatten()
-valid_indices = np.isfinite(win_rates) & np.isfinite(num_matches)
-win_rates = win_rates[valid_indices]
-num_matches = num_matches[valid_indices]
-
-kde = gaussian_kde(win_rates, weights=num_matches)
-
-def utility_score(kde, winrate, min_value, max_value):
-    total_cdf, _ = quad(kde, min_value, max_value)
-    cdf, _ = quad(kde, min_value, winrate)
-    utility = ((cdf - (total_cdf / 2)) / (total_cdf / 2))
-    return round(utility, 2)
-
-Payoff_df = WinRate_df.copy()
-
-print(f"Making Payoff Dataframe")
-for row_hero in WinRate_df.index:
-    for col_hero in WinRate_df.columns:
-        winrate = WinRate_df.at[row_hero, col_hero]
-        Payoff_df.at[row_hero, col_hero] = utility_score(kde, winrate, min_value, max_value)
-
-Payoff_df = Payoff_df.astype(float)
-
-print(f"Outporting MarvelRivals_Payoff_Matrix.csv")
-Payoff_df.to_csv("MarvelRivals_Payoff_Matrix.csv", index=True)
+    missing = set(heroes) - {hero} - matchups.keys()
+    if not matchups or missing:
+        raise ValueError(
+            f"{hero}: missing matchup data for {', '.join(sorted(missing)) or 'all heroes'}. "
+            "The page may be unavailable or its layout may have changed."
+        )
+    # Preserve the original model's synthetic self-match convention.
+    opponent_counts = [count for name, (_, count) in matchups.items() if name != hero]
+    matchups[hero] = (50.0, int(np.mean(opponent_counts)))
+    return matchups
 
 
+def scrape_matrices(heroes=None, delay=0.5):
+    """Fetch each hero once for both matrices; fail before exporting partial data."""
+    heroes = sorted_heroes if heroes is None else list(heroes)
+    if len(heroes) < 2 or len(set(map(format_hero_name, heroes))) != len(heroes):
+        raise ValueError("Provide at least two distinct heroes")
+    rates = pd.DataFrame(index=heroes, columns=heroes, dtype=float)
+    counts = pd.DataFrame(index=heroes, columns=heroes, dtype=float)
+    retry = Retry(total=3, backoff_factor=1, status_forcelist=[429, 500, 502, 503, 504])
+    with requests.Session() as session:
+        session.headers.update(HEADERS)
+        session.mount("https://", HTTPAdapter(max_retries=retry))
+        for i, hero in enumerate(heroes):
+            if i:
+                time.sleep(delay)
+            print(f"Fetching {hero} ({i + 1}/{len(heroes)})...", flush=True)
+            response = session.get(BASE_URL.format(format_hero_name(hero)), timeout=30)
+            response.raise_for_status()
+            matchups = parse_matchups(response.text, hero, heroes)
+            for opponent, (rate, count) in matchups.items():
+                rates.at[hero, opponent] = rate
+                counts.at[hero, opponent] = count
+    return rates, counts.astype("int64")
 
+
+def build_payoff_matrix(win_rates, num_matches):
+    """Keep the existing weighted KDE payoff, using its analytic integral."""
+    if not (win_rates.index.equals(num_matches.index)
+            and win_rates.columns.equals(num_matches.columns)):
+        raise ValueError("Win-rate and match-count labels must match")
+    values = win_rates.to_numpy(dtype=float)
+    weights = num_matches.to_numpy(dtype=float)
+    if (not np.isfinite(values).all() or not np.isfinite(weights).all()
+            or (weights <= 0).any() or (values < 0).any() or (values > 100).any()):
+        raise ValueError("Cannot calculate payoffs from missing or invalid matchup data")
+    low, high = values.min(), values.max()
+    if low == high:
+        raise ValueError("Cannot fit a KDE to constant win rates")
+    kde = gaussian_kde(values.ravel(), weights=weights.ravel())
+    total_cdf = kde.integrate_box_1d(low, high)
+    # Repeated win rates share a payoff; integrate each distinct value once.
+    utilities = {rate: round(2 * kde.integrate_box_1d(low, rate) / total_cdf - 1, 2)
+                 for rate in np.unique(values)}
+    payoff = np.array([utilities[rate] for rate in values.ravel()]).reshape(values.shape)
+    return pd.DataFrame(payoff, index=win_rates.index, columns=win_rates.columns)
+
+
+def export_matrices(win_rates, num_matches, payoff, output_dir="."):
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for name, frame in (("WinRate", win_rates), ("NumMatches", num_matches), ("Payoff", payoff)):
+        path = output_dir / f"MarvelRivals_{name}_Matrix.csv"
+        frame.to_csv(path, index=True)
+        print(f"Exported {path}")
+
+
+def main(output_dir="."):
+    win_rates, num_matches = scrape_matrices()
+    payoff = build_payoff_matrix(win_rates, num_matches)
+    # All requests, parsing, and payoff calculation must succeed before writing.
+    export_matrices(win_rates, num_matches, payoff, output_dir)
+    return win_rates, num_matches, payoff
+
+if __name__ == "__main__":
+    WinRate_df, NumMatches_df, Payoff_df = main()
